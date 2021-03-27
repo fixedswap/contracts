@@ -1,0 +1,40 @@
+{
+  "name": "stableswap",
+  "version": "1.0.0",
+  "description": "Stable Swap",
+  "main": "hardhat.config.js",
+  "scripts": {
+    "node": "npx hardhat node --tags TESTUniswap,TESToken,StableSwap",
+    "build": "npx hardhat compile",
+    "deploy:ropsten": "npx hardhat --network ropsten deploy --tags TESTUniswap,TESToken,StableSwap",
+    "deploy:kovan": "npx hardhat --network kovan deploy --tags TESTUniswap,TESToken,StableSwap",
+    "deploy:rinkeby": "npx hardhat --network rinkeby deploy --tags TESTUniswap,TESToken,StableSwap",
+    "deploy:goerli": "npx hardhat --network goerli deploy --tags TESTUniswap,TESToken,StableSwap",
+    "deploy:mainnet": "npx hardhat --network mainnet deploy --tags StableSwap",
+    "deploy:heco": "npx hardhat --network heco deploy --tags StableSwap",
+    "deploy:bsc": "npx hardhat --network bsc deploy --tags StableSwap",
+    "prettier": "prettier --write 'deploy/**/*.js' 'tasks/**/*.js' 'hardhat.config.js' && prettier --write 'contracts/**/*.sol'",
+    "lint": "prettier --list-different 'deploy/**/*.js' 'tasks/**/*.js' 'hardhat.config.js' 'contracts/**/*.sol'"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "chai": "^4.3.3",
+    "ethereum-waffle": "^3.3.0",
+    "ethereumjs-util": "^7.0.9",
+    "ethers": "^5.0.32",
+    "hardhat": "^2.1.1",
+    "hardhat-deploy": "^0.7.0-beta.50",
+    "hardhat-deploy-ethers": "^0.3.0-beta.7",
+    "prettier": "^2.2.1",
+    "prettier-plugin-solidity": "1.0.0-beta.6",
+    "web3": "^1.3.4"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "3.2.0",
+    "@uniswap/v2-periphery": "1.1.0-beta.0"
+  }
+}
